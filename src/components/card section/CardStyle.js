@@ -4,7 +4,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70vw;
+  width: 60vw;
+  padding: 2%;
 `;
 
 export const NewsInfo = styled.div`
@@ -12,6 +13,7 @@ export const NewsInfo = styled.div`
 `;
 
 export const NewsImage = styled.img`
-  width: 23vw;
+  width: 18vw;
   box-sizing: content-box;
+  padding-left: 2%;
 `;

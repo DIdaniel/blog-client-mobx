@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import './App.css';
 //import Counter from './components/Counter';
 import Axios from 'axios';
 import Card from './components/card section/Card';
+import Header from './components/header/Header';
 
 // https://newsapi.org/docs/get-started
 // GET : https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Card newsUrl={newsUrl} />
       <Card newsUrl={newsUrl} />
       <Card newsUrl={newsUrl} />
