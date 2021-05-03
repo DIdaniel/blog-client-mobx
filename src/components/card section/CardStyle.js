@@ -14,6 +14,6 @@ export const NewsInfo = styled.div`
 
 export const NewsImage = styled.img`
   width: 18vw;
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
   padding-left: 2%;
 `;

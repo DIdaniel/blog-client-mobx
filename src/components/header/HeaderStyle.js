@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro'
 
 export const Container = styled.div`
   display: flex;
@@ -6,8 +6,8 @@ export const Container = styled.div`
   align-items: center;
   padding: 4rem 0 3rem;
   margin-bottom: 3rem;
-  background-color: #E8DFCE;
-`;
+  background-color: #e8dfce;
+`
 
 export const GuidLine = styled.div`
   display: flex;
@@ -15,24 +15,24 @@ export const GuidLine = styled.div`
   align-items: center;
   max-width: 80rem;
   /* border: 2px dashed green; */
-`;
+`
 
 export const HeaderSection = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   height: 40vh;
   width: 55%;
-`;
+`
 
 export const HeadLine = styled.h1`
   font-size: 3rem;
-`;
+`
 
 export const Paragraph = styled.p`
   font-size: 1.2rem;
-`;
+`
 
 export const Button = styled.button`
   font-size: 1.2rem;
@@ -43,12 +43,11 @@ export const Button = styled.button`
   cursor: pointer;
   transition: all 0.3s;
   &:hover {
-    background-color:dodgerblue;
+    background-color: dodgerblue;
     color: #fff;
-    }
-`;
-
+  }
+`
 
 export const Image = styled.img`
   width: 36%;
-`;
+`
