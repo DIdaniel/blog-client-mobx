@@ -2,8 +2,10 @@ import React from "react";
 import {
   Wrapper,
   LoginPart,
-  ID,
+  EMAIL,
+  USERNAME,
   PW,
+  CONFIRM,
   Label,
   Input,
   IdnPw,
@@ -15,25 +17,40 @@ const Login = () => {
     <Wrapper>
       <LoginPart>
         <IdnPw>
-          <ID>
-            <Label htmlFor="userName">Admin ID</Label>
+          <EMAIL>
+            {/* <Label htmlFor="userName">Admin ID</Label> */}
+            <Input type="email" placeholder="EMAIL" name="EMAIL" required />
+          </EMAIL>
+
+          <USERNAME>
+            {/* <Label htmlFor="userName">Admin ID</Label> */}
             <Input
               type="text"
-              placeholder="Enter Admin ID"
+              placeholder="USER NAME"
               name="userName"
               required
             />
-          </ID>
+          </USERNAME>
 
           <PW>
-            <Label htmlFor="userPsw">Admin Password</Label>
+            {/* <Label htmlFor="userPsw">Admin Password</Label> */}
             <Input
               type="password"
-              placeholder="Enter Admin Password"
-              name="userPsw"
+              placeholder="PASSWORD"
+              name="password"
               required
             />
           </PW>
+
+          <CONFIRM>
+            {/* <Label htmlFor="userPsw">Admin Password</Label> */}
+            <Input
+              type="password"
+              placeholder="CONFIRM PASSWORD"
+              name="confirm password"
+              required
+            />
+          </CONFIRM>
         </IdnPw>
 
         <Btn type="submit">Login</Btn>

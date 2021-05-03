@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
-  background-color: darkblue;
+  background-color: #181818;
 `;
 
 export const LoginPart = styled.form`
@@ -13,7 +13,6 @@ export const LoginPart = styled.form`
   justify-content: space-between;
   border: 3px solid #fff;
   padding: 5%;
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,28 +28,46 @@ export const IdnPw = styled.div`
   width: 100%;
 `;
 
-export const ID = styled.div`
+export const EMAIL = styled.div`
   display: flex;
   padding: 3%;
   color: #fff;
   width: 100%;
+  background-color: #4a4a4a;
 `;
 
-export const Label = styled.label`
-  font-size: 2rem;
+export const USERNAME = styled.div`
+  display: flex;
+  padding: 3%;
+  color: #fff;
   width: 100%;
+  background-color: #4a4a4a;
 `;
 
-export const Input = styled.input`
-  width: 25rem;
-  padding: 15px;
-`;
+// export const Label = styled.label`
+//   font-size: 2rem;
+//   width: 100%;
+// `;
 
 export const PW = styled.div`
   display: flex;
   padding: 3%;
   color: #fff;
   width: 100%;
+  background-color: #4a4a4a;
+`;
+
+export const CONFIRM = styled.div`
+  display: flex;
+  padding: 3%;
+  color: #fff;
+  width: 100%;
+  background-color: #4a4a4a;
+`;
+
+export const Input = styled.input`
+  width: 25rem;
+  padding: 15px;
 `;
 
 export const Btn = styled.button`
