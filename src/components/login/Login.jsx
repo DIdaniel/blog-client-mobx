@@ -1,60 +1,38 @@
 import React from "react";
 import {
   Wrapper,
-  LoginPart,
+  LOGINPART,
+  IDPW,
+  TITLE,
   EMAIL,
-  USERNAME,
+  INPUT,
   PW,
-  CONFIRM,
-  Label,
-  Input,
-  IdnPw,
-  Btn,
+  Button,
 } from "./LoginStyle";
 
 const Login = () => {
   return (
     <Wrapper>
-      <LoginPart>
-        <IdnPw>
+      <LOGINPART>
+        <IDPW>
+          <TITLE>로 그 인</TITLE>
           <EMAIL>
             {/* <Label htmlFor="userName">Admin ID</Label> */}
-            <Input type="email" placeholder="EMAIL" name="EMAIL" required />
+            <INPUT type="email" placeholder="EMAIL" name="EMAIL" required />
           </EMAIL>
-
-          <USERNAME>
-            {/* <Label htmlFor="userName">Admin ID</Label> */}
-            <Input
-              type="text"
-              placeholder="USER NAME"
-              name="userName"
-              required
-            />
-          </USERNAME>
-
           <PW>
             {/* <Label htmlFor="userPsw">Admin Password</Label> */}
-            <Input
+            <INPUT
               type="password"
               placeholder="PASSWORD"
               name="password"
               required
             />
           </PW>
+        </IDPW>
 
-          <CONFIRM>
-            {/* <Label htmlFor="userPsw">Admin Password</Label> */}
-            <Input
-              type="password"
-              placeholder="CONFIRM PASSWORD"
-              name="confirm password"
-              required
-            />
-          </CONFIRM>
-        </IdnPw>
-
-        <Btn type="submit">Login</Btn>
-      </LoginPart>
+        <Button type="submit">로그인</Button>
+      </LOGINPART>
     </Wrapper>
   );
 };

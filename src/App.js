@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import Axios from "axios";
 import Card from "./components/card section/Card";
 import Header from "./components/header/Header";
+import Signup from "./components/signup/Signup";
 import Login from "./components/login/Login";
 
 // https://newsapi.org/docs/get-started
@@ -37,6 +38,9 @@ function App() {
   return (
     <div className="App">
       <Switch>
+        <Route exact path="/signup">
+          <Signup />
+        </Route>
         <Route exact path="/login">
           <Login />
         </Route>
