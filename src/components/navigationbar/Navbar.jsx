@@ -2,7 +2,7 @@ import React from "react";
 import {
   NavContainer,
   InnerContainer,
-  LogoContainer,
+  // LogoContainer,
   SubscribeBtn,
 } from "./NavbarStyle";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <NavContainer>
       <InnerContainer>
-        <LogoContainer />
+        {/* <LogoContainer /> */}
         <SubscribeBtn>구독하기</SubscribeBtn>
       </InnerContainer>
     </NavContainer>

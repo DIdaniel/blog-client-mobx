@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  Wrapper,
-  LOGINPART,
-  IDPW,
-  TITLE,
-  EMAIL,
-  INPUT,
-  PW,
-  Button,
-} from "./LoginStyle";
+import { Wrapper, LOGINPART, IDPW, TITLE } from "./LoginStyle";
+import { Input } from "../common/InputForm";
+import { Button } from "../common/buttonForm";
 
 const Login = () => {
   return (
@@ -16,22 +9,11 @@ const Login = () => {
       <LOGINPART>
         <IDPW>
           <TITLE>로 그 인</TITLE>
-          <EMAIL>
-            {/* <Label htmlFor="userName">Admin ID</Label> */}
-            <INPUT type="email" placeholder="EMAIL" name="EMAIL" required />
-          </EMAIL>
-          <PW>
-            {/* <Label htmlFor="userPsw">Admin Password</Label> */}
-            <INPUT
-              type="password"
-              placeholder="PASSWORD"
-              name="password"
-              required
-            />
-          </PW>
+          <Input type="email" placeholder="E-MAIL" required />
+          <Input type="password" placeholder="PASSWORD" required />
         </IDPW>
 
-        <Button type="submit">로그인</Button>
+        <Button type="submit">로 그 인</Button>
       </LOGINPART>
     </Wrapper>
   );

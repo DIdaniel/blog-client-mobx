@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import Logo from "../../Logo.svg";
 
 export const NavContainer = styled.div`
   float: left;
@@ -18,11 +17,12 @@ export const InnerContainer = styled.div`
   opacity: 0.6;
 `;
 
-export const LogoContainer = styled.img.attrs((props) => ({
-  src: Logo,
-}))`
-  width: 60px;
-`;
+// export const LogoContainer = styled.img.attrs((props) => ({
+//   src: Logo,
+// }))`
+//   //background-image:
+//   width: 60px;
+// `;
 
 export const SubscribeBtn = styled.button`
   font-size: 1.2rem;
