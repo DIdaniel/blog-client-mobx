@@ -1,17 +1,7 @@
 import React from "react";
-import {
-  Wrapper,
-  LoginPart,
-  EMAIL,
-  Title,
-  USERNAME,
-  PW,
-  CONFIRM,
-  Label,
-  Input,
-  IdnPw,
-  Btn,
-} from "./SignupStyle.js";
+import { Wrapper, LoginPart, IdnPw, Title } from "./SignupStyle.js";
+import { Input } from "../common/InputForm";
+import { Button } from "../common/buttonForm";
 
 const Signup = () => {
   return (
@@ -19,43 +9,38 @@ const Signup = () => {
       <LoginPart>
         <IdnPw>
           <Title>회 원 가 입</Title>
-          <EMAIL>
-            {/* <Label htmlFor="userName">Admin ID</Label> */}
-            <Input type="email" placeholder="EMAIL" name="EMAIL" required />
-          </EMAIL>
+          <Input
+            type="email"
+            placeholder="E-MAIL"
+            onFocus="EMAIL = ''"
+            name="EMAIL"
+            required
+          />
 
-          <USERNAME>
-            {/* <Label htmlFor="userName">Admin ID</Label> */}
-            <Input
-              type="text"
-              placeholder="USER NAME"
-              name="userName"
-              required
-            />
-          </USERNAME>
+          <Input
+            type="text"
+            placeholder="USER NAME"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='NAME"
+            required
+          />
 
-          <PW>
-            {/* <Label htmlFor="userPsw">Admin Password</Label> */}
-            <Input
-              type="password"
-              placeholder="PASSWORD"
-              name="password"
-              required
-            />
-          </PW>
+          <Input
+            type="password"
+            placeholder="PASSWORD"
+            name="password"
+            required
+          />
 
-          <CONFIRM>
-            {/* <Label htmlFor="userPsw">Admin Password</Label> */}
-            <Input
-              type="password"
-              placeholder="CONFIRM PASSWORD"
-              name="confirm password"
-              required
-            />
-          </CONFIRM>
+          <Input
+            type="password"
+            placeholder="CONFIRM PASSWORD"
+            name="confirm password"
+            required
+          />
         </IdnPw>
 
-        <Btn type="submit">가입하기</Btn>
+        <Button type="submit">가입하기</Button>
       </LoginPart>
     </Wrapper>
   );

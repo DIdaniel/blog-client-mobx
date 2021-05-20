@@ -1,27 +1,26 @@
-import React from 'react'
-import { 
-  Container,
-  GuidLine,
-  HeaderSection,
-  HeadLine,
-  Paragraph,
-  Button,
-  Image
-} from './HeaderStyle';
+import React from "react";
+import Navbar from "../navigationbar/Navbar";
+import {
+  HeaderContainer,
+  InnerContainer,
+  Title,
+  UnderLine,
+  SubTitle,
+} from "./HeaderStyle";
 
 const Header = () => {
   return (
-    <Container>
-      <GuidLine>
-        <HeaderSection>
-          <HeadLine>Write down your FANTASTIC developing ideas</HeadLine>
-          <Paragraph>Read and share new perspectives on just about any topic. <br/>Everyone’s welcome.</Paragraph>
-          <Button>Get Started</Button>
-        </HeaderSection>
-        <Image src="./assets/header.jpg" alt="header"/>
-      </GuidLine>
-    </Container>
-  )
-}
+    <>
+      <Navbar />
+      <HeaderContainer>
+        <InnerContainer>
+          <Title>Hoon & Daniel</Title>
+          <UnderLine></UnderLine>
+          <SubTitle>Node, TypeScript Enthusiasts</SubTitle>
+        </InnerContainer>
+      </HeaderContainer>
+    </>
+  );
+};
 
-export default Header
+export default Header;
