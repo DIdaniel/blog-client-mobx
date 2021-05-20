@@ -10,7 +10,8 @@ fieldset, form, legend, label,
 table, caption, thead, tbody, tfoot, tr, th, td,
 ul, ol, li, a, input, select, textarea {margin: 0;padding: 0; border: 0 none; }
 
-body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, '맑은 고딕','돋움', Dotum, AppleGothic, Sans-serif, Arial; font-size: 12px; line-height: 1;color: #fff; background-color: #171717;}
+html { font-size: 62.5%; }
+body {font-family: 'Noto Sans KR', MalgunGothic, '맑은 고딕','돋움', Dotum, AppleGothic, Sans-serif, Arial; line-height: 1;color: #fff; background-color: #171717;}
 button{
   cursor: pointer;
 }
