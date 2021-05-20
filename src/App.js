@@ -9,8 +9,6 @@ import Signup from "./components/signup/Signup";
 import Card from "./components/card-section/Card";
 
 function App() {
-  const [newsUrl, setNewsUrl] = useState([]);
-
   return (
     <div className="App">
       <Switch>
@@ -20,10 +18,7 @@ function App() {
         <Route exact path="/login">
           <Login />
         </Route>
-
         <Header />
-        <Card newsUrl={newsUrl} />
-        <Card newsUrl={newsUrl} />
       </Switch>
     </div>
   );
