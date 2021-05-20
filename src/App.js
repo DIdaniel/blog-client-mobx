@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Route, Switch } from "react-router-dom";
 // import axios from "axios";
-import Login from "./components/login/Login";
-import Signup from "./components/signup/Signup";
+import Login from "./components/pages/login/Login";
+import Signup from "./components/pages/signup/Signup";
 import Header from "./components/pages/common/header/Header";
 
 function App() {
