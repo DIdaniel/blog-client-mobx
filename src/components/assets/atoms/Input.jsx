@@ -1,9 +1,10 @@
-import React from "react";
+//import React from "react";
 import styled from "styled-components/macro";
 
 export const Input = styled.input`
   display: flex;
   padding: 3%;
+  margin-top: 1rem;
   margin-bottom: 1.2rem;
   width: 80%;
   background-color: #4a4a4a;
@@ -13,8 +14,7 @@ export const Input = styled.input`
   font-family: "Open Sans", sans-serif;
 
   &::placeholder {
-    color: #fff;
-    // font-family: "Open Sans", sans-serif;
+    color: #b3b3b3;
   }
 
   &:focus {
@@ -22,11 +22,5 @@ export const Input = styled.input`
     caret-color: yellow;
     color: yellowgreen;
     font-size: 0.9em;
-    //font-family: "Open Sans", sans-serif;
-
-    &::placeholder {
-      color: #fff;
-      //font-family: "Open Sans", sans-serif;
-    }
   }
 `;

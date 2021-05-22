@@ -52,4 +52,5 @@ const HorizontalBar = styled.span`
   height: 2px;
   width: 10rem;
 `;
+
 export default Header;

@@ -1,17 +1,72 @@
-import React from "react";
+import { useForm } from "react-hook-form";
+
 //import { Wrapper, LOGINPART, IDPW, TITLE } from "./LoginStyle";
 import styled from "styled-components/macro";
 import { Input } from "../../assets/atoms/Input";
 import { Button } from "../../assets/atoms/Button";
+import Navbar from "../common/navbar/Navbar";
 
-const Wrapper = styled.form`
+const Login = () => {
+  const {
+    register,
+    //watch,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  return (
+    <Container>
+      <Navbar />
+      <LogInForm onSubmit={handleSubmit(onSubmit)}>
+        <InputWrapper>
+          <TITLE>로 그 인</TITLE>
+          <Input
+            name="email"
+            type="email"
+            placeholder="E-MAIL"
+            {...register("email", {
+              required: true,
+              minLength: 5,
+              pattern: /^\S+@\S+$/i,
+            })}
+          />
+          {errors.email && <p>이메일을 입력해주세요.</p>}
+
+          <Input
+            name="password"
+            type="password"
+            placeholder="PASSWORD"
+            {...register("password", {
+              required: true,
+              minLength: 6,
+            })}
+          />
+          {errors.password && errors.password.type === "required" && (
+            <p>비밀번호를 입력해주세요</p>
+          )}
+          {errors.password && errors.password.type === "minLength" && (
+            <p>비밀번호는 6자 이상 입력해주세요!</p>
+          )}
+        </InputWrapper>
+
+        <Button type="submit">로 그 인</Button>
+      </LogInForm>
+    </Container>
+  );
+};
+
+const Container = styled.div`
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #181818;
 `;
 
-const LOGINPART = styled.div`
+const LogInForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,7 +79,7 @@ const LOGINPART = styled.div`
   width: 50%;
 `;
 
-const IDPW = styled.div`
+const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -38,21 +93,5 @@ const TITLE = styled.p`
   color: #fff;
   margin-bottom: 5rem;
 `;
-
-const Login = () => {
-  return (
-    <Wrapper>
-      <LOGINPART>
-        <IDPW>
-          <TITLE>로 그 인</TITLE>
-          <Input type="email" placeholder="E-MAIL" required />
-          <Input type="password" placeholder="PASSWORD" required />
-        </IDPW>
-
-        <Button type="submit">로 그 인</Button>
-      </LOGINPART>
-    </Wrapper>
-  );
-};
 
 export default Login;
