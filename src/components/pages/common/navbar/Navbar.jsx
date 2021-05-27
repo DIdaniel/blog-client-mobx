@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components/macro";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components/macro";
 import { Link, useHistory } from "react-router-dom";
 import LogoImage from "../../../assets/images/Logo.svg";
 import RoundButton from "../../../assets/atoms/RoundButton";
@@ -8,8 +8,23 @@ const Navbar = () => {
   const history = useHistory();
   const navToSubscribe = () => history.push("/subscribe");
 
+  const [posY, setPosY] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  function onScroll() {
+    setPosY(window.scrollY);
+  }
+
+  console.log("posY :", posY);
+
   return (
-    <StyledNavbar>
+    <StyledNavbar posY={posY}>
       <NavContainer>
         <LogoContainer>
           <Link to="/">
@@ -35,6 +50,9 @@ const StyledNavbar = styled.nav`
   width: 100%;
   height: 5.5rem;
   background-color: transparent;
+  padding: 2rem 16rem;
+  transition: all 0.3s;
+  ${({ posY }) => (posY > 70 ? "opacity: 0" : "opacity: 1")}
 `;
 
 const NavContainer = styled.div`

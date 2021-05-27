@@ -12,7 +12,7 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   color: #fff;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
 
   &:hover {
     background-color: #fff;
@@ -31,10 +31,8 @@ const ButtonText = styled.span`
 
 const RoundButton = (props) => {
   return (
-    <Button>
-      <ButtonText onClick={(e) => props.onClick(e)}>
-        {props.children}
-      </ButtonText>
+    <Button onClick={(e) => props.onClick(e)}>
+      <ButtonText>{props.children}</ButtonText>
     </Button>
   );
 };

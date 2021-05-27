@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
-
-// import { Wrapper, LoginPart, IdnPw, Title } from "./SignupStyle.js";
 import styled from "styled-components/macro";
 import { Input } from "../../assets/atoms/Input";
 import { Button } from "../../assets/atoms/Button";
-import Navbar from "../common/navbar/Navbar";
 
 const Signup = () => {
   const {
@@ -24,7 +21,6 @@ const Signup = () => {
 
   return (
     <FormWrapper>
-      <Navbar />
       <SignUpForm onSubmit={handleSubmit(onSubmit)}>
         <UserInputContainer>
           <Title>회 원 가 입</Title>
@@ -39,7 +35,9 @@ const Signup = () => {
               pattern: /^\S+@\S+$/i,
             })}
           />
-          {errors.email && <p>이메일을 입력해주세요.</p>}
+          {errors.email && errors.email.type === "required" && (
+            <p>이메일을 입력해주세요.</p>
+          )}
           <Input
             name="name"
             type="text"
@@ -93,10 +91,17 @@ const Signup = () => {
         </UserInputContainer>
 
         <Button type="submit">가입하기</Button>
+
+        <Message>
+          Already registered?
+          <Anchor href="/login">Login</Anchor>
+        </Message>
       </SignUpForm>
     </FormWrapper>
   );
 };
+
+export default Signup;
 
 const FormWrapper = styled.div`
   display: flex;
@@ -124,7 +129,7 @@ const UserInputContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 `;
 
 const Title = styled.p`
@@ -133,4 +138,16 @@ const Title = styled.p`
   margin-bottom: 5rem;
 `;
 
-export default Signup;
+const Message = styled.p`
+  margin-top: 4rem;
+  color: lightyellow;
+  font-size: 1.2rem;
+`;
+
+const Anchor = styled.a`
+  margin-left: 1.3rem;
+  &:hover {
+    color: lightyellow;
+    text-decoration: none;
+  }
+`;

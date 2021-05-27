@@ -1,10 +1,8 @@
 import { useForm } from "react-hook-form";
-
-//import { Wrapper, LOGINPART, IDPW, TITLE } from "./LoginStyle";
 import styled from "styled-components/macro";
 import { Input } from "../../assets/atoms/Input";
 import { Button } from "../../assets/atoms/Button";
-import Navbar from "../common/navbar/Navbar";
+// import Navbar from "../common/navbar/Navbar";
 
 const Login = () => {
   const {
@@ -20,7 +18,7 @@ const Login = () => {
 
   return (
     <Container>
-      <Navbar />
+      {/* <Navbar /> */}
       <LogInForm onSubmit={handleSubmit(onSubmit)}>
         <InputWrapper>
           <TITLE>로 그 인</TITLE>
@@ -54,10 +52,17 @@ const Login = () => {
         </InputWrapper>
 
         <Button type="submit">로 그 인</Button>
+
+        <Message>
+          Not registered?
+          <Anchor href="/signup"> Create an account</Anchor>
+        </Message>
       </LogInForm>
     </Container>
   );
 };
+
+export default Login;
 
 const Container = styled.div`
   display: flex;
@@ -94,4 +99,16 @@ const TITLE = styled.p`
   margin-bottom: 5rem;
 `;
 
-export default Login;
+const Message = styled.p`
+  margin-top: 4rem;
+  color: lightyellow;
+  font-size: 1.2rem;
+`;
+
+const Anchor = styled.a`
+  margin-left: 1.3rem;
+  &:hover {
+    color: lightyellow;
+    text-decoration: none;
+  }
+`;
