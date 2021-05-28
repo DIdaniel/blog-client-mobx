@@ -2,12 +2,10 @@ import { useForm } from "react-hook-form";
 import styled from "styled-components/macro";
 import { Input } from "../../assets/atoms/Input";
 import { Button } from "../../assets/atoms/Button";
-// import Navbar from "../common/navbar/Navbar";
 
 const Login = () => {
   const {
     register,
-    //watch,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -18,10 +16,9 @@ const Login = () => {
 
   return (
     <Container>
-      {/* <Navbar /> */}
       <LogInForm onSubmit={handleSubmit(onSubmit)}>
         <InputWrapper>
-          <TITLE>로 그 인</TITLE>
+          <TITLE>로그인</TITLE>
           <Input
             name="email"
             type="email"
@@ -51,7 +48,7 @@ const Login = () => {
           )}
         </InputWrapper>
 
-        <Button type="submit">로 그 인</Button>
+        <Button type="submit">로그인</Button>
 
         <Message>
           Not registered?
@@ -93,9 +90,9 @@ const InputWrapper = styled.div`
   margin-bottom: 5rem;
 `;
 
-const TITLE = styled.p`
-  font-size: 2.5rem;
+const TITLE = styled.h1`
   color: #fff;
+  letter-spacing: 16px;
   margin-bottom: 5rem;
 `;
 

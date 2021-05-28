@@ -23,12 +23,11 @@ const Signup = () => {
     <FormWrapper>
       <SignUpForm onSubmit={handleSubmit(onSubmit)}>
         <UserInputContainer>
-          <Title>회 원 가 입</Title>
+          <Title>회원가입</Title>
           <Input
             name="email"
             type="email"
             placeholder="E-MAIL"
-            //onFocus="EMAIL = ''"
             {...register("email", {
               required: true,
               minLength: 5,
@@ -42,8 +41,6 @@ const Signup = () => {
             name="name"
             type="text"
             placeholder="USER NAME"
-            //onfocus="this.placeholder=''"
-            //onblur="this.placeholder='NAME"
             {...register("name", {
               required: true,
               maxLength: 20,
@@ -132,9 +129,9 @@ const UserInputContainer = styled.div`
   margin-bottom: 3rem;
 `;
 
-const Title = styled.p`
-  font-size: 2.5rem;
+const Title = styled.h1`
   color: #fff;
+  letter-spacing: 16px;
   margin-bottom: 5rem;
 `;
 
