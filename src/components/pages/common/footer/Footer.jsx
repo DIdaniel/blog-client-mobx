@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components/macro";
+import styled from "styled-components/macro";
 import RoundButton from "../../../assets/atoms/RoundButton";
 
 const Footer = () => {
@@ -16,19 +16,15 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrapper = styled.div`
-  position: relative;
-  height: 100vh;
+  margin-top: 10rem;
 `;
 
 const StyledFooter = styled.div`
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 15rem;
-  background-color: black;
+  background-color: #111;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   padding: 2rem 16rem;
   font-size: 1.3rem;
 `;

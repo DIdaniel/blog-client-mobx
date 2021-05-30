@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import Footer from "../footer/Footer";
+
 import LastestPost from "./LastestPost";
 import PageNav from "./PageNav";
 import PostList from "./PostList";
@@ -21,7 +21,6 @@ const Body = () => {
         </BodyRight>
       </BodyWrapper>
       <PageNav />
-      <Footer />
     </>
   );
 };
