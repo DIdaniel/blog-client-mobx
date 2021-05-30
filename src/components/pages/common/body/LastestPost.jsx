@@ -5,7 +5,6 @@ const LastestPost = (props) => {
   return (
     <LastestWrapper>
       <Image src="./assets/living.jpg" alt="main" />
-
       <LastestInfo>
         <WritingInfo>
           <Category>category</Category>
@@ -30,7 +29,6 @@ export default LastestPost;
 
 const LastestWrapper = styled.section`
   display: flex;
-  //flex: 1 1 50%;
   margin-bottom: 2rem;
 `;
 
@@ -52,8 +50,8 @@ const WritingInfo = styled.div`
 `;
 
 const Category = styled.p`
-  font-weight: bold;
-  color: dodgerblue;
+  font-weight: 800;
+  color: #3eb0ef;
   text-transform: uppercase;
   margin-bottom: 2rem;
 `;
