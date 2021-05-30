@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled, { keyframes } from "styled-components/macro";
+import styled from "styled-components/macro";
 import { Link, useHistory } from "react-router-dom";
 import LogoImage from "../../../assets/images/Logo.svg";
 import RoundButton from "../../../assets/atoms/RoundButton";
@@ -50,13 +50,12 @@ const StyledNavbar = styled.nav`
   width: 100%;
   height: 5.5rem;
   background-color: transparent;
-  padding: 2rem 16rem;
   transition: all 0.3s;
-  ${({ posY }) => (posY > 70 ? "opacity: 0" : "opacity: 1")}
+  ${({ posY }) => (posY > 250 ? "opacity: 0" : "opacity: 1")}
 `;
 
 const NavContainer = styled.div`
-  max-width: 1400px;
+  max-width: 1148px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
