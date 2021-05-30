@@ -1,26 +1,9 @@
 import React from "react";
 import styled from "styled-components/macro";
-
-import LastestPost from "./LastestPost";
-import PageNav from "./PageNav";
-import PostList from "./PostList";
-import Profiles from "./Profiles";
-
-const Body = () => {
+const Body = (props) => {
   return (
     <>
-      <BodyWrapper>
-        <BodyLeft>
-          <LastestPost />
-          <PostList />
-          <PostList />
-          <PostList />
-        </BodyLeft>
-        <BodyRight>
-          <Profiles />
-        </BodyRight>
-      </BodyWrapper>
-      <PageNav />
+      <BodyWrapper>{props.children}</BodyWrapper>
     </>
   );
 };
@@ -28,15 +11,6 @@ const Body = () => {
 export default Body;
 
 const BodyWrapper = styled.main`
-  display: flex;
-  justify-content: space-between;
-  padding: 5rem 15rem;
-`;
-
-const BodyLeft = styled.div`
-  margin-right: 2rem;
-`;
-
-const BodyRight = styled.div`
-  margin-left: 2rem;
+  max-width: 1148px;
+  margin: 4rem auto;
 `;
