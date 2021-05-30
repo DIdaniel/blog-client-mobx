@@ -6,6 +6,8 @@ import Body from "./components/pages/common/body/Body";
 import Login from "./components/pages/login/Login";
 import Signup from "./components/pages/signup/Signup";
 import Header from "./components/pages/common/header/Header";
+import Footer from "./components/pages/common/footer/Footer";
+import MainPage from "./components/pages/main-page/MainPage";
 
 function App() {
   return (
@@ -13,8 +15,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <Header />
-          <Body />
+          <MainPage />
         </Route>
         <Route path="/signup">
           <Signup />
@@ -23,6 +24,7 @@ function App() {
           <Login />
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 }

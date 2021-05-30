@@ -55,8 +55,8 @@ const WritingInfo = styled.div`
 `;
 
 const Category = styled.p`
-  font-weight: bold;
-  color: dodgerblue;
+  font-weight: 800;
+  color: #3eb0ef;
   text-transform: uppercase;
   margin-bottom: 2rem;
 `;
