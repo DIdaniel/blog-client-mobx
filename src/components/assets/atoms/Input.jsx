@@ -4,8 +4,7 @@ import styled from "styled-components/macro";
 export const Input = styled.input`
   display: flex;
   padding: 3%;
-  margin-top: 1rem;
-  margin-bottom: 1.2rem;
+  margin: 1rem 0 1rem 0;
   width: 80%;
   background-color: #4a4a4a;
   color: yellowgreen;

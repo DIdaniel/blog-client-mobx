@@ -1,15 +1,11 @@
 import { useForm } from "react-hook-form";
-
-//import { Wrapper, LOGINPART, IDPW, TITLE } from "./LoginStyle";
 import styled from "styled-components/macro";
 import { Input } from "../../assets/atoms/Input";
 import { Button } from "../../assets/atoms/Button";
-import Navbar from "../common/navbar/Navbar";
 
 const Login = () => {
   const {
     register,
-    //watch,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -20,10 +16,9 @@ const Login = () => {
 
   return (
     <Container>
-      <Navbar />
       <LogInForm onSubmit={handleSubmit(onSubmit)}>
         <InputWrapper>
-          <TITLE>로 그 인</TITLE>
+          <TITLE>로그인</TITLE>
           <Input
             name="email"
             type="email"
@@ -53,11 +48,18 @@ const Login = () => {
           )}
         </InputWrapper>
 
-        <Button type="submit">로 그 인</Button>
+        <Button type="submit">로그인</Button>
+
+        <Message>
+          Not registered?
+          <Anchor href="/signup"> Create an account</Anchor>
+        </Message>
       </LogInForm>
     </Container>
   );
 };
+
+export default Login;
 
 const Container = styled.div`
   display: flex;
@@ -88,10 +90,22 @@ const InputWrapper = styled.div`
   margin-bottom: 5rem;
 `;
 
-const TITLE = styled.p`
-  font-size: 2.5rem;
+const TITLE = styled.h1`
   color: #fff;
+  letter-spacing: 16px;
   margin-bottom: 5rem;
 `;
 
-export default Login;
+const Message = styled.p`
+  margin-top: 4rem;
+  color: lightyellow;
+  font-size: 1.2rem;
+`;
+
+const Anchor = styled.a`
+  margin-left: 1.3rem;
+  &:hover {
+    color: lightyellow;
+    text-decoration: none;
+  }
+`;

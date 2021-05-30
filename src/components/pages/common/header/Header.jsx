@@ -18,6 +18,8 @@ const Header = (props) => {
   );
 };
 
+export default Header;
+
 const StyledHeader = styled.header`
   height: 35rem;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -52,5 +54,3 @@ const HorizontalBar = styled.span`
   height: 2px;
   width: 10rem;
 `;
-
-export default Header;
