@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-const LastestPost = () => {
+const LastestPost = (props) => {
   return (
     <LastestWrapper>
       <Image src="./assets/living.jpg" alt="main" />

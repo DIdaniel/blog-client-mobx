@@ -11,6 +11,6 @@ const Body = (props) => {
 export default Body;
 
 const BodyWrapper = styled.main`
-  max-width: 1148px;
+  max-width: 1100px;
   margin: 4rem auto;
 `;
